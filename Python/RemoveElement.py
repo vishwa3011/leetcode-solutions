@@ -12,3 +12,6 @@ class Solution:
             i+=1
         
         return count
+
+        ''' while val in nums:
+            nums.remove(val)'''
