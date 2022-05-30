@@ -14,11 +14,5 @@ class Solution:
             else:
                 high = mid - 1
         
-        # If element is not present
-        idx = 0
-        for i in nums:
-            if i < target:
-                idx += 1
-        
-        return idx
+        return low
             
