@@ -11,9 +11,7 @@ class Solution:
         
     def swap(self, i, j, nums):
         while i < j:
-            temp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = temp
+            nums[i], nums[j] = nums[j], nums[i]
             i += 1
             j -= 1  
         return nums
