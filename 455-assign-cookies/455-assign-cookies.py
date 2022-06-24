@@ -6,33 +6,51 @@ class Solution:
         s -> len(s) is number of cookies
              s[i] is size of a cookie
         '''
+        if not g or not s:
+            return 0
+        # sort method
+        s.sort()
+        g.sort()
         
         content = 0
-        n_child = len(g)
-        n_cookie = len(s)
-        i = 0
+        kid = 0
         
-        while n_cookie != 0 and n_child != 0:
-            max_c = max(s)
-            max_g = max(g)
-            if max_g <= max_c:
-                content += 1 # assigned this cookie to kid
-                s.remove(max_c) # removed the maximum element
-                g.remove(max_g)
-    
-                if s != None and g != None:
-                    n_cookie = len(s)
-                    n_child = len(g)
-                else:
-                    break
-            else:
-                if g != None:
-                    g.remove(max_g)
-                    n_child = len(g)
-                else:
-                    break
-                
+        for cookie_size in s:
+            if kid >= len(g):
+                return content
+            elif cookie_size >= g[kid]:
+                content += 1
+                kid += 1
+        
         return content
+    
+        # My solution (remove function slows down the run time)
+#         content = 0
+#         n_child = len(g)
+#         n_cookie = len(s)
+#         i = 0
+        
+#         while n_cookie != 0 and n_child != 0:
+#             max_c = max(s)
+#             max_g = max(g)
+#             if max_g <= max_c:
+#                 content += 1 # assigned this cookie to kid
+#                 s.remove(max_c) # removed the maximum element
+#                 g.remove(max_g)
+    
+#                 if s != None and g != None:
+#                     n_cookie = len(s)
+#                     n_child = len(g)
+#                 else:
+#                     break
+#             else:
+#                 if g != None:
+#                     g.remove(max_g)
+#                     n_child = len(g)
+#                 else:
+#                     break
+                
+#         return content
                     
 #         # Brute force
         
