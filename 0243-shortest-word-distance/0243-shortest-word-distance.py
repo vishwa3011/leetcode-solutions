@@ -1,7 +1,7 @@
 class Solution:
     def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
         
-        shortest_distance = float('inf')
+        shortest_distance = len(wordsDict)
         idx1, idx2 = -1, -1
         for idx, word in enumerate(wordsDict):
             
