@@ -17,8 +17,6 @@ class Solution:
             
             numbers_formed.append(int(''.join(map(str, num_copy))))
         
-        
-        print(numbers_formed)
         return max(numbers_formed)
 
             
