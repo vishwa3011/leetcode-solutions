@@ -11,7 +11,7 @@ class Solution:
                 hashmap[nums[i]] += 1
         
         ans = []
-        print(hashmap, n)
+        
         for key, val in hashmap.items():
             if val > n:
                 ans.append(key)
