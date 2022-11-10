@@ -16,9 +16,12 @@ class Solution:
     
     
     def isNiceSubstring(self, string):
-        chars = Counter("".join(set(string)))
-        for key in chars:
-            validchars = key.upper() in chars and key.lower() in chars
+        chars = set(string)
+        
+        for char in chars:
+            
+            validchars = char.upper() in chars and char.lower() in chars
+            
             if not validchars:
                 return False
         
