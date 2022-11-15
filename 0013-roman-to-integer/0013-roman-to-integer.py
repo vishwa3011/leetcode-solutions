@@ -9,7 +9,7 @@ class Solution:
         while i < len(s):
             
             if i < len(s) - 1:
-                if (s[i] == 'I' and s[i+1] == 'V') or (s[i] == 'I' and s[i+1] == 'X') or (s[i] == 'X' and s[i+1] == 'L') or (s[i] == 'X' and s[i+1] == 'C') or (s[i] == 'C' and s[i+1] == 'D') or (s[i] == 'C' and s[i+1] == 'M'):
+                if i < len(s) - 1 and (s[i] == 'I' and s[i+1] == 'V') or (s[i] == 'I' and s[i+1] == 'X') or (s[i] == 'X' and s[i+1] == 'L') or (s[i] == 'X' and s[i+1] == 'C') or (s[i] == 'C' and s[i+1] == 'D') or (s[i] == 'C' and s[i+1] == 'M'):
                     integer += hashmap[s[i+1]] - hashmap[s[i]]
                     i += 1
                 else:
