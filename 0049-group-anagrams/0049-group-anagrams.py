@@ -4,7 +4,6 @@ class Solution:
         
         group_anagrams = defaultdict(list)
         ans = []
-        # count_chars = [0]*26
         
         for word in strs:
             count_chars = [0]*26
