@@ -14,7 +14,6 @@ class Solution:
         
         sorted_hashmap = {k : v for k, v in sorted(hashmap.items(), key = lambda x:x[1], reverse = True)}        
         
-        print(sorted_hashmap)
         ans = []
         
         for key in sorted_hashmap.keys():
