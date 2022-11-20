@@ -6,14 +6,12 @@ class Codec:
         for s in strs:
             encode_string += '\t' + s
         
-        print(encode_string)
         return encode_string
         
 
     def decode(self, s: str) -> List[str]:
         """Decodes a single string to a list of strings.
         """
-        #decode_string = s.replace('\t',' ')
         decode_lst = []
         for s in s.split("\t"):
             decode_lst.append(s)
