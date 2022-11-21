@@ -25,7 +25,7 @@ class Solution:
 
             #print(length, remove_index, prev.val, curr.val)
             prev.next = curr.next
-            curr = None
+            #curr = None
         
         return head
         
