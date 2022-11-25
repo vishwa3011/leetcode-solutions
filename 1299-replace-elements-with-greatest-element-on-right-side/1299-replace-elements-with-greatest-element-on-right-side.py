@@ -16,4 +16,12 @@ class Solution:
             i -= 1   
             greatest_elements.append(max_val)
         
-        return list(reversed(greatest_elements))            
+        j = 0
+        k = len(greatest_elements) - 1
+        
+        while j <= k:
+            greatest_elements[j], greatest_elements[k] = greatest_elements[k], greatest_elements[j]
+            j += 1
+            k -= 1
+        
+        return greatest_elements    
